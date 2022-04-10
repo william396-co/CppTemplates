@@ -10,34 +10,39 @@ using namespace std;
 template<typename T>
 T const& max(T const& x, T const& y)
 {
-	printf("%s<%s>()\n", __FUNCTION__, typeid(T const&).name());
+	//printf("%s<%s>()\n", __FUNCTION__, typeid(T const&).name());
+	cout << __FUNCTION__ << "<" << typeid(T).name() << "(" << typeid(T const&).name() << "," << typeid(T const&).name() << ")\n";
 	return x < y ? y : x;
 }
 
 //重载函数模板
 inline int const& max(int const& a, int const& b)
 {
-	printf("%s(%s,%s)\n", __FUNCTION__, typeid(int const&).name(), typeid(int const&).name());
+	//printf("%s(%s,%s)\n", __FUNCTION__, typeid(int const&).name(), typeid(int const&).name());
+	cout << __FUNCTION__ << "(" << typeid(int const&).name() << "," << typeid(int const&).name() <<  ")\n";
 	return a < b ? b : a;
 }
 
 template<typename T>
 inline T const& max(T const& a, T const& b, T const& c)
 {
-	printf("%s<%s>()\n", __FUNCTION__, typeid(T const&).name());
+	//printf("%s<%s>()\n", __FUNCTION__, typeid(T const&).name());
+	cout << __FUNCTION__ << "<" << typeid(T).name() << "(" << typeid(T const&).name() << "," << typeid(T const&).name() << ")\n";
 	return ::max(::max(a, b), c); //调用其他的模板函数
 }
 
 template<typename T>
 inline T* const& max(T* const& a, T* const& b)
 {
-	printf("%s<%s>()\n", __FUNCTION__, typeid(T* const&).name());
+	//printf("%s<%s>()\n", __FUNCTION__, typeid(T* const&).name());
+	cout << __FUNCTION__ <<"<"<<typeid(T).name()<< "(" << typeid(T* const&).name() << "," << typeid(T* const&).name() << ")\n";
 	return *a < *b ? b : a;
 }
 
 inline char const* const& max(char const* const& a, char const* const& b)
 {
-	printf("%s(%s,%s,%s)\n", __FUNCTION__, typeid(char const* const&).name(), typeid(char const* const&).name(), typeid(char const* const&).name());
+	//cout<<("%s(%s,%s,%s)\n", __FUNCTION__, typeid(char const* const&).name(), typeid(char const* const&).name(), typeid(char const* const&).name());
+	cout << __FUNCTION__ << "(" << typeid(char const* const&).name() << "," << typeid(char const* const&).name() << "," << typeid(char const* const&).name() << ")\n";
 	return strcmp(a, b) < 0 ? b : a;
 }
 
