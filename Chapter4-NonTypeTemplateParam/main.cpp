@@ -51,7 +51,11 @@ void addvalue_test()
 	vector<int> src = { 1,2,3,4,5,6 };
 	vector<int> des;
 	des.resize(src.size());
-	std::transform(src.begin(), src.end(), des.begin(), addValue<int, 5>);	
+	//std::transform(src.begin(), src.end(), des.begin(), addValue<int, 5>);	
+	//仿函数
+	//std::transform(src.begin(), src.end(), des.begin(), std::bind2nd(std::plus<int>(),5));
+	std::transform(src.begin(), src.end(), des.begin(), std::bind1st(std::plus<int>(), 3));//bind1st param
+	std::transform(src.begin(), src.end(), des.begin(), std::plus<int>());
 	// 也可以用lambda表达式 更方便
 	//std::transform(src.begin(), src.end(), des.begin(), [](int const& x) {return x + 5; });
 
