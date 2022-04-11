@@ -20,16 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myfirst.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="std.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="shallow_instantiate.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="tracer.h">
+    <ClInclude Include="decl_define.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ce886dec-c20e-43b2-a822-e849ee6d0e19}</ProjectGuid>
-    <RootNamespace>Chapter6TemplateInAction</RootNamespace>
+    <ProjectGuid>{7030635b-7882-487d-b569-b23508badc3e}</ProjectGuid>
+    <RootNamespace>Chapter7TemplateTerm</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,10 +142,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myfirst.h" />
-    <ClInclude Include="shallow_instantiate.h" />
-    <ClInclude Include="std.h" />
-    <ClInclude Include="tracer.h" />
+    <ClInclude Include="decl_define.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
